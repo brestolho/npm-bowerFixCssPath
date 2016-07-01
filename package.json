@@ -1,0 +1,35 @@
+{
+  "name": "gulp-bower-fix-css-path",
+  "version": "0.0.1",
+  "description": "Replace url",
+  "keywords": [],
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "gulp": ">=3.0.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-util": "^3.0.4",
+    "jshint": "^2.6.3",
+    "map-stream": ">=0.0.4",
+    "should": ">=2.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "lodash": "^2.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Restolho",
+  "license": "ISC"
+}
