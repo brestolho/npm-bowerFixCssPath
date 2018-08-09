@@ -41,10 +41,7 @@ function gulpBowerFixCssPath(obj) {
 
     stream._transform = function (file, unused, callback) {
 
-        //return false;
         var urls = "";
-        //regex detect all url('"..."')
-        //var url = /[[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}[0-9]?\b/gi;
 
         //regex detect all url('"...?..."') "with args after extension"
         var url = /url\(["']*[[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}[0-9]?\b(\?[=.&#0-9a-zA-Z]*)*['"]?\)/gi;
@@ -99,7 +96,7 @@ function gulpBowerFixCssPath(obj) {
             }
 
             //build the new url
-            var absolutePath = (!!obj.absolutePath ? obj.absolutePath + file.relative.split('\\')[0] + '/' : '');
+            var absolutePath = (!!obj.absolutePath ? obj.absolutePath : '');
             var convertPath = "url('" + absolutePath + prefixPath + basename + extname + (!!args?"?"+args:"") + "')";
 
             //add string to replace on array
